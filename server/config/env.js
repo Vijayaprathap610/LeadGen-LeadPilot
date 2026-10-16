@@ -21,7 +21,7 @@ const config = {
   env: process.env.NODE_ENV || 'development',
   port: readNumber('PORT', 5000, { min: 1, max: 65535 }),
   mongoUri: process.env.MONGO_URI || 'mongodb+srv://vijayaprathap610navi_db_user:PklSIogPqxvrzSu9@leadpilot.rwantnw.mongodb.net/',
-  clientOrigins: readList('CLIENT_URL', ['http://localhost:5173']).map((o) => o.replace(/\/+$/, '')),
+  clientOrigins: readList('CLIENT_URL', ['https://leadgen-leadpilot.onrender.com']).map((o) => o.replace(/\/+$/, '')),
   maxFileSizeMb: readNumber('MAX_FILE_SIZE_MB', 5, { min: 0.1, max: 50, integer: false }),
   maxImportRows: readNumber('MAX_IMPORT_ROWS', 20000, { min: 1, max: 200000 }),
   trustProxy: process.env.TRUST_PROXY === 'true',
